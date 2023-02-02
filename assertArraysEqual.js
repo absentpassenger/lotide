@@ -1,17 +1,15 @@
+// eqArrays function 
 const eqArrays = function(arrayOne, arrayTwo) {
   if (arrayOne.length !== arrayTwo.length) {
-    return false;
+    return false
   }
-  for (let i = 0; i < arrayOne.length; i++) {
-    if (Array.isArray(arrayOne[i]) && (eqArrays(arrayOne[i], arrayTwo[i]) === false)) {
-      return false;
-    }
-    if (!(Array.isArray(arrayOne[i])) && arrayOne[i] !== arrayTwo[i]){
-      return false;
-    }
+for (let i = 0; i < arrayOne.length; i++) {
+  if (arrayOne[i] !== arrayTwo[i]) {
+    return false
   }
-  return true 
+} return true
 };
+
 
 
 //eqArrays([1, 2, 3], [1, 2, 3]) // => true
@@ -28,7 +26,7 @@ const eqArrays = function(arrayOne, arrayTwo) {
 
 
 
-
+// assertArraysEqual function 
 const assertArraysEqual = function(arrayOne, arrayTwo) {
   if (eqArrays(arrayOne,arrayTwo)) {
     console.log(`✅✅✅ Assertion Passed: ${arrayOne} === ${arrayTwo}`);
